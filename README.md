@@ -18,37 +18,37 @@ task_delay.c (Drift = |3600 - (3600 * 0.5) * (1.999998)| = 0.0036 s)
 
 timer.c (Drift = |3600 - (3600 * 0.5) * (1.999998)| = 0.0036 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/timer.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/timer.jpg)
 
 sleep.c (Drift = |3600 - (3600 * 0.5) * (1.999998)| = 0.0036 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/sleep.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/sleep.jpg)
 
 
 For our busy-wait loop, we decided to use a for-loop that printed a single character to stdout 1024 times to simulate operations on one KB of data. Below are the modified task_delay.c, timer.c, and sleep.c
 
 task_delay.c (Drift = |3600 - (3600 * 0.5) * (2.019996)| = 35.9928 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/task_delay_busy.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/task_delay_busy.jpg)
 
 timer.c (Drift = |3600 - (3600 * 0.5) * (1.999998)| = 0.0036 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/timer_busy.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/timer_busy.jpg)
 
 sleep.c (Drift = |3600 - (3600 * 0.5) * (2.010726)| = 19.3086 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/sleep_busy.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/sleep_busy.jpg)
 
 Here is the same signal output by the function generator.
 (Drift = |3600 - (3600 * 0.5) * (2.000016)| = 0.0288 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/function_generator.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/function_generator.jpg)
 
 ## Activity 2
 The measured delay between the sync signal and the GPIO output was negligible in the first case with no delay added (pictured below are two overlapping signals at this time scale)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/gpio_interrupt.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/gpio_interrupt.jpg)
 
 When we added a delay with the same busy loop, we found a time delay of delta_t = 5.0512 ms
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/gpio_interrupt_busy.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/gpio_interrupt_busy.jpg)
