@@ -14,7 +14,7 @@ Formula for drift = |3600s - (3600[s] * 1/(2*DELAY_MS[s])) * T_avg [s]|
 
 task_delay.c (Drift = |3600 - (3600 * 0.5) * (1.999998)| = 0.0036 s)
 
-https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/task_delay.jpg
+![alt text](https://github.com/uofu-emb/2024-lab5-samuel_bosch-varun/blob/dev/photos/task_delay.jpg)
 
 timer.c (Drift = |3600 - (3600 * 0.5) * (1.999998)| = 0.0036 s)
 
