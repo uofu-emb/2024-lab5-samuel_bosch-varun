@@ -2,6 +2,7 @@
 #include <pico/stdlib.h>
 #include <FreeRTOS.h>
 #include <task.h>
+#include "test.h"
 
 void main_task(__unused void *params)
 {
@@ -9,6 +10,12 @@ void main_task(__unused void *params)
     while (1) {
         toggle = !toggle;
         gpio_put(OUT_PIN, toggle);
+        if (BUSY_TEST_LOOP){
+            // Simluating 1kb process
+            for(int i =0; i < 1024; i++){
+                printf("T");
+            }
+        }
         vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
     }
 }

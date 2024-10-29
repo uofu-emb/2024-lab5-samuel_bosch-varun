@@ -1,12 +1,19 @@
 #include <stdio.h>
 #include <pico/stdlib.h>
 #include <pico/sync.h>
+#include "test.h"
 
 int toggle = 1;
 bool timer_callback(__unused struct repeating_timer *t)
 {
     toggle = !toggle;
     gpio_put(OUT_PIN, toggle);
+    if (BUSY_TEST_LOOP){
+        // Simluating 1kb process
+        for(int i =0; i < 1024; i++){
+            printf("T");
+        }
+    }
     return true;
 }
 
